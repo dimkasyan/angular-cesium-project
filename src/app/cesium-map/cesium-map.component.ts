@@ -14,6 +14,7 @@ import {
   LabelStyle,
   VerticalOrigin,
   Cartesian2,
+  buildModuleUrl,
 } from 'cesium';
 
 import { environment } from '../../environment/environment';
@@ -79,6 +80,8 @@ export class CesiumMapComponent implements OnInit, OnDestroy {
 
   async ngOnInit() {
     Ion.defaultAccessToken = environment.cesiumToken;
+
+    buildModuleUrl(environment.production ? '/angular-cesium-project/assets/cesium' : '/assets/cesium/');
 
     this.viewer = new Viewer('cesiumContainer', {
       terrain: Terrain.fromWorldTerrain(),
