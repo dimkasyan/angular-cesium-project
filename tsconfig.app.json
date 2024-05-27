@@ -2,8 +2,13 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "baseUrl": "./",
     "outDir": "./out-tsc/app",
-    "types": []
+    "paths": {
+      "cesium": [
+        "node_modules/cesium"
+      ]
+    }
   },
   "files": [
     "src/main.ts"
