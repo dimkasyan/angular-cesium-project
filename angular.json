@@ -28,7 +28,7 @@
               {
                 "glob": "**/*",
                 "input": "node_modules/cesium/Build/Cesium",
-                "output": "assets/cesium"
+                "output": "./assets/cesium"
               }
             ],
             "styles": [
@@ -55,7 +55,7 @@
               "outputHashing": "all"
             },
             "development": {
-              "optimization": false,
+              "optimization": true,
               "extractLicenses": false,
               "sourceMap": true
             }
